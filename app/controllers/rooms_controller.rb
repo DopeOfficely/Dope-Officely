@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
     date = params[:date] || Date.today
 
     payload = []
-    room.desks.each do |desk|
+    room.desks.includes(:books).each do |desk|
       payload << {
         id: desk.id,
         seat: desk.seat,
