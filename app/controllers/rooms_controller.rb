@@ -14,6 +14,7 @@ class RoomsController < ApplicationController
         id: desk.id,
         seat: desk.seat,
         description: desk.description,
+        enabled: desk.enabled,
         booked: desk.books.any? { |book| book.date == date },
         booked_by: desk.books.find_by(date: date)&.user&.name
       }
