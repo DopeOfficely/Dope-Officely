@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgres
   database: dope_officely_production
   username: dope_officely
   password: <%= ENV["DOPE_OFFICELY_DATABASE_PASSWORD"] %>
