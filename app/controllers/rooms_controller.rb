@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
 
   def show
     room = Room.find(params[:id])
-    date = params[:date] || Date.today
+    date = params[:date].to_date || Date.today
 
     payload = []
     room.desks.includes(:books).each do |desk|
