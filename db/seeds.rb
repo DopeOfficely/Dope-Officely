@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+mountain = Room.create(name: "Mountain")
+city = Room.create(name: "City")
+
+# TODO: find out desk arrangements and create desks
